@@ -1,9 +1,16 @@
-function App() {
-  return (
-    <div>
-      <h1>Hello, world!</h1>
-    </div>
-  )
-}
+import { Box } from "@mui/material";
+import Hero from "./components/Hero";
+import AppBarTop from "./components/AppBar";
+import Careers from "./components/Careers";
 
-export default App
+const App = () => {
+  return (
+    <Box>
+      <AppBarTop />
+      <Hero />
+      <Careers />
+    </Box>
+  );
+};
+
+export default App;
