@@ -3,16 +3,17 @@ import { Box, Typography } from "@mui/material";
 const Hero = () => {
   return (
     <Box
-      width={"100%"}
       height={`calc(${window.innerHeight}px - 192px)`}
       display="flex"
       alignItems={"center"}
       justifyContent={"center"}
+      bgcolor={"#F5F5F5"}
+      px={32}
     >
       <Box display={"flex"} alignItems={"center"}>
         <Box width={"520px"} mr={4}>
           <Typography variant="h4" fontWeight={300}>
-            Hi, I am a full stack developer from Canada.
+            Hi, I am a software developer based in Vancouver, Canada.
           </Typography>
           <Typography variant="h6" fontWeight={300}>
             Over the years I developed a skill set in a range of technologies

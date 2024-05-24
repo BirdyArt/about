@@ -7,6 +7,8 @@ const AppBarTop = () => {
       sx={{
         background: "#F5F5F5",
         boxShadow: "none",
+        paddingX: 32,
+        paddingTop: 16,
       }}
     >
       <Toolbar>
