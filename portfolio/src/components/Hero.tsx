@@ -17,8 +17,8 @@ const Hero = () => {
           </Typography>
           <Typography variant="h6" fontWeight={300}>
             Over the years I developed a skill set in a range of technologies
-            and frameworks. Where I really value clean and readable code. Also
-            I'm very passionate about UX / UI.
+            and frameworks. I really value clean and readable code. Also I'm
+            very passionate about UX / UI.
           </Typography>
         </Box>
         <Box width={"300px"}>
