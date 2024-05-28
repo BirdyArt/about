@@ -18,7 +18,7 @@ const Careers = () => {
       display="flex"
       justifyContent={"center"}
       alignItems={"center"}
-      bgcolor={"#F2F2F2"}
+      bgcolor={"#F0F0F0"}
       px={32}
     >
       <Box>
