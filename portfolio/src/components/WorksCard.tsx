@@ -31,10 +31,16 @@ const WorksCard = ({
         display: { xs: "block", md: "flex" },
         flexDirection: "column",
         justifyContent: "space-between",
+        bgcolor: "#F0F0F0",
+        "-webkit-transition": "box-shadow .3s ease-out;",
+        ":hover": {
+          boxShadow: "1px 8px 20px grey",
+          "-webkit-transition": "box-shadow .3s ease-in",
+        },
       }}
     >
       <Box
-        pt={4}
+        pt={2}
         display="flex"
         alignItems={"center"}
         justifyContent={"center"}

@@ -25,7 +25,7 @@ const Careers = () => {
       display={{ xs: "block", md: "flex" }}
       justifyContent={"center"}
       alignItems={"center"}
-      px={{ xs: 2, md: 32 }}
+      px={{ xs: 2, md: 24, lg: 32, xl: 48 }}
     >
       <Box>
         <Typography

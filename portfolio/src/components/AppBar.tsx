@@ -5,7 +5,7 @@ const AppBarTop = () => {
     <AppBar
       position="static"
       sx={{
-        background: "#F5F5F5",
+        background: "#F7F7F7",
         boxShadow: "none",
         px: { xs: 2, md: 24, lg: 32, xl: 48 },
         paddingTop: { xs: 2, md: 16 },
