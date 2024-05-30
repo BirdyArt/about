@@ -3,15 +3,18 @@ import { Box, Typography } from "@mui/material";
 const Hero = () => {
   return (
     <Box
-      height={`calc(${window.innerHeight}px - 192px)`}
-      display="flex"
+      height={{
+        xs: `calc(${window.innerHeight}px - 100px)`,
+        md: `calc(${window.innerHeight}px - 192px)`,
+      }}
+      display={{ xs: "block", md: "flex" }}
       alignItems={"center"}
       justifyContent={"center"}
       bgcolor={"#F5F5F5"}
-      px={32}
+      px={{ xs: 2, md: 32 }}
     >
-      <Box display={"flex"} alignItems={"center"}>
-        <Box width={"520px"} mr={4}>
+      <Box display={{ xs: "block", md: "flex" }} alignItems={"center"}>
+        <Box maxWidth={"520px"} mr={{ xs: 0, md: 4 }}>
           <Typography variant="h4" fontWeight={300}>
             Hi, I am a software developer based in Vancouver, Canada.
           </Typography>
@@ -21,13 +24,13 @@ const Hero = () => {
             very passionate about UX / UI.
           </Typography>
         </Box>
-        <Box width={"300px"}>
+        <Box maxWidth={"520px"}>
           <img
             src="/me.jpg"
             alt="Artem Sobolev"
-            width={"100%"}
             style={{
               filter: "grayscale(100%)",
+              maxWidth: "300px",
               padding: "10px",
               border: "20px solid #0000",
               outline: "1px solid #000000",

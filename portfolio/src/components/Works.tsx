@@ -39,15 +39,23 @@ const Works = () => {
 
   return (
     <Box
-      height={window.innerHeight}
-      display="flex"
+      height={{ xs: "100%", xl: window.innerHeight }}
+      display={{ xs: "block", md: "flex" }}
       justifyContent={"center"}
       alignItems={"center"}
       bgcolor={"#F5F5F5"}
-      px={32}
+      px={{ xs: 2, md: 32 }}
     >
       <Box>
-        <Typography variant="h4" fontWeight={300} textAlign={"center"} mb={2}>
+        <Typography
+          fontFamily={"staatliches"}
+          fontSize={32}
+          lineHeight={"40px"}
+          fontWeight={600}
+          pb={2}
+          textAlign={"center"}
+          color="black"
+        >
           Works
         </Typography>
         <Grid container spacing={2}>

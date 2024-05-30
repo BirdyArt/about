@@ -14,15 +14,22 @@ import TimelineOppositeContent, {
 const Careers = () => {
   return (
     <Box
-      height={window.innerHeight}
-      display="flex"
+      height={{ xs: "100%", lg: window.innerHeight }}
+      display={{ xs: "block", md: "flex" }}
       justifyContent={"center"}
       alignItems={"center"}
-      bgcolor={"#F0F0F0"}
-      px={32}
+      bgcolor={"#F5F5F5"}
+      px={{ xs: 2, md: 32 }}
     >
       <Box>
-        <Typography variant="h4" fontWeight={300} textAlign={"center"}>
+        <Typography
+          fontFamily={"staatliches"}
+          fontSize={32}
+          lineHeight={"40px"}
+          fontWeight={600}
+          textAlign={"center"}
+          color="black"
+        >
           Careers
         </Typography>
         <Timeline
@@ -34,7 +41,7 @@ const Careers = () => {
         >
           <TimelineItem>
             <TimelineOppositeContent color="text.secondary">
-              MAY 2022 - PRESENT
+              05/2022 - NOW
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
@@ -42,16 +49,17 @@ const Careers = () => {
             </TimelineSeparator>
             <TimelineContent sx={{ paddingTop: "2px" }}>
               <Typography variant="h6">
-                Frontend Software Developer @ Merchant Growth (fulltime)
+                Frontend Software Developer @ Merchant Growth
               </Typography>
               <Typography variant="body2">
                 Vancouver |{" "}
                 <Link
                   href="https://merchantgrowth.com"
                   color="text.secondary"
+                  target="_blank"
                   sx={{ textDecoration: "none" }}
                 >
-                  https://www.merchantgrowth.com/
+                  website link
                 </Link>
               </Typography>
               <Typography variant="body1" mt={2}>
@@ -69,7 +77,7 @@ const Careers = () => {
           </TimelineItem>
           <TimelineItem>
             <TimelineOppositeContent color="text.secondary">
-              JULY 2021 - MAY 2022
+              07/2021 - 05/2022
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
@@ -77,16 +85,17 @@ const Careers = () => {
             </TimelineSeparator>
             <TimelineContent sx={{ paddingTop: "2px" }}>
               <Typography variant="h6">
-                Software Developer @ IdyaFlow (fulltime)
+                Software Developer @ IdyaFlow
               </Typography>
               <Typography variant="body2">
                 Vancouver |{" "}
                 <Link
                   href="https://www.idyaflow.com/"
+                  target="_blank"
                   color="text.secondary"
                   sx={{ textDecoration: "none" }}
                 >
-                  https://www.idyaflow.com/
+                  website link
                 </Link>
               </Typography>
               <Typography variant="body1" mt={2}>
@@ -101,7 +110,7 @@ const Careers = () => {
           </TimelineItem>
           <TimelineItem>
             <TimelineOppositeContent color="text.secondary">
-              JULY 2021 - MAY 2022
+              12/2020 - 07/2021
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
@@ -109,16 +118,17 @@ const Careers = () => {
             </TimelineSeparator>
             <TimelineContent sx={{ paddingTop: "2px" }}>
               <Typography variant="h6">
-                Frontend Software Developer / Facilitator @ Chingu (fulltime)
+                Frontend Software Developer / Facilitator @ Chingu
               </Typography>
               <Typography variant="body2">
                 Vancouver |{" "}
                 <Link
                   href="https://www.chingu.io/"
+                  target="_blank"
                   color="text.secondary"
                   sx={{ textDecoration: "none" }}
                 >
-                  https://www.chingu.io/
+                  website link
                 </Link>
               </Typography>
               <Typography variant="body1" mt={2}>
@@ -132,7 +142,7 @@ const Careers = () => {
           </TimelineItem>
           <TimelineItem>
             <TimelineOppositeContent color="text.secondary">
-              OCTOBER 2013 - JULY 2021
+              10/2013 - 12/2020
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
@@ -140,23 +150,24 @@ const Careers = () => {
             </TimelineSeparator>
             <TimelineContent sx={{ paddingTop: "2px" }}>
               <Typography variant="h6">
-                Dark times before I switched to Tech (fulltime)
+                Dark times before I switched to Tech @ Everywhere
               </Typography>
               <Typography variant="body2">
                 Canada |{" "}
                 <Link
                   href="https://www.mapcrunch.com/"
+                  target="_blank"
                   color="text.secondary"
                   sx={{ textDecoration: "none" }}
                 >
-                  https://www.mapcrunch.com/
+                  website link
                 </Link>
               </Typography>
               <Typography variant="body1" mt={2}>
                 I did a lot of different jobs before I switched to tech. I was a
                 coffee shop manager on Commercial Drive, product coordinator
                 (that one actually was kind of technical as I was writing macros
-                in Excel and working with Adobe creative suite) at large tourist
+                in Excel and working with Adobe creative suite) at large tourism
                 company focused on Canada and Alaska and other various non tech
                 jobs.
               </Typography>
