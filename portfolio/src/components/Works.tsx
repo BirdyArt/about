@@ -43,7 +43,6 @@ const Works = () => {
       display={{ xs: "block", md: "flex" }}
       justifyContent={"center"}
       alignItems={"center"}
-      bgcolor={"#F5F5F5"}
       px={{ xs: 2, md: 32 }}
     >
       <Box>

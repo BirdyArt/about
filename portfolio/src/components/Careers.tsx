@@ -5,20 +5,26 @@ import {
   TimelineDot,
   TimelineConnector,
   TimelineContent,
+  timelineItemClasses,
 } from "@mui/lab";
-import { Box, Link, Typography } from "@mui/material";
+import { Box, Link, Typography, useMediaQuery, useTheme } from "@mui/material";
 import TimelineOppositeContent, {
   timelineOppositeContentClasses,
 } from "@mui/lab/TimelineOppositeContent";
 
 const Careers = () => {
+  const theme = useTheme();
+  const desktop = useMediaQuery(theme.breakpoints.up("md"));
+  const styleSx = desktop
+    ? { [`& .${timelineOppositeContentClasses.root}`]: { flex: 0.2 } }
+    : { [`& .${timelineItemClasses.root}:before`]: { flex: 0, padding: 0 } };
+
   return (
     <Box
       height={{ xs: "100%", lg: window.innerHeight }}
       display={{ xs: "block", md: "flex" }}
       justifyContent={"center"}
       alignItems={"center"}
-      bgcolor={"#F5F5F5"}
       px={{ xs: 2, md: 32 }}
     >
       <Box>
@@ -29,25 +35,27 @@ const Careers = () => {
           fontWeight={600}
           textAlign={"center"}
           color="black"
+          mb={2}
         >
           Careers
         </Typography>
-        <Timeline
-          sx={{
-            [`& .${timelineOppositeContentClasses.root}`]: {
-              flex: 0.2,
-            },
-          }}
-        >
+        <Timeline sx={styleSx}>
           <TimelineItem>
-            <TimelineOppositeContent color="text.secondary">
-              05/2022 - NOW
-            </TimelineOppositeContent>
+            {desktop ? (
+              <TimelineOppositeContent color="text.secondary">
+                05/2022 - NOW
+              </TimelineOppositeContent>
+            ) : null}
             <TimelineSeparator>
               <TimelineDot />
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent sx={{ paddingTop: "2px" }}>
+            <TimelineContent sx={{ paddingTop: { xs: "7px", md: "2px" } }}>
+              {!desktop ? (
+                <Typography variant="body1" color="text.secondary">
+                  05/2022 - NOW
+                </Typography>
+              ) : null}
               <Typography variant="h6">
                 Frontend Software Developer @ Merchant Growth
               </Typography>
@@ -76,14 +84,21 @@ const Careers = () => {
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
-            <TimelineOppositeContent color="text.secondary">
-              07/2021 - 05/2022
-            </TimelineOppositeContent>
+            {desktop ? (
+              <TimelineOppositeContent color="text.secondary">
+                07/2021 - 05/2022
+              </TimelineOppositeContent>
+            ) : null}
             <TimelineSeparator>
               <TimelineDot />
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent sx={{ paddingTop: "2px" }}>
+            <TimelineContent sx={{ paddingTop: { xs: "7px", md: "2px" } }}>
+              {!desktop ? (
+                <Typography variant="body1" color="text.secondary">
+                  07/2021 - 05/2022
+                </Typography>
+              ) : null}
               <Typography variant="h6">
                 Software Developer @ IdyaFlow
               </Typography>
@@ -109,14 +124,21 @@ const Careers = () => {
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
-            <TimelineOppositeContent color="text.secondary">
-              12/2020 - 07/2021
-            </TimelineOppositeContent>
+            {desktop ? (
+              <TimelineOppositeContent color="text.secondary">
+                12/2020 - 07/2021
+              </TimelineOppositeContent>
+            ) : null}
             <TimelineSeparator>
               <TimelineDot />
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent sx={{ paddingTop: "2px" }}>
+            <TimelineContent sx={{ paddingTop: { xs: "7px", md: "2px" } }}>
+              {!desktop ? (
+                <Typography variant="body1" color="text.secondary">
+                  12/2020 - 07/2021
+                </Typography>
+              ) : null}
               <Typography variant="h6">
                 Frontend Software Developer / Facilitator @ Chingu
               </Typography>
@@ -141,16 +163,23 @@ const Careers = () => {
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
-            <TimelineOppositeContent color="text.secondary">
-              10/2013 - 12/2020
-            </TimelineOppositeContent>
+            {desktop ? (
+              <TimelineOppositeContent color="text.secondary">
+                10/2013 - 12/2020
+              </TimelineOppositeContent>
+            ) : null}
             <TimelineSeparator>
               <TimelineDot />
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent sx={{ paddingTop: "2px" }}>
+            <TimelineContent sx={{ paddingTop: { xs: "7px", md: "2px" } }}>
+              {!desktop ? (
+                <Typography variant="body1" color="text.secondary">
+                  10/2013 - 12/2020
+                </Typography>
+              ) : null}
               <Typography variant="h6">
-                Dark times before I switched to Tech @ Everywhere
+                Dark times before I switched to Tech @ Non-tech jobs
               </Typography>
               <Typography variant="body2">
                 Canada |{" "}

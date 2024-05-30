@@ -12,7 +12,6 @@ const Hero = () => {
       alignItems={"center"}
       textAlign={{ xs: "center", md: "left" }}
       justifyContent={"center"}
-      bgcolor={"#F5F5F5"}
       px={{ xs: 2, md: 24, lg: 32, xl: 48 }}
     >
       <Box display={{ xs: "block", md: "flex" }} alignItems={"center"}>

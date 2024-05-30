@@ -6,7 +6,7 @@ import Works from "./components/Works";
 
 const App = () => {
   return (
-    <Box>
+    <Box bgcolor={"#F5F5F5"}>
       <AppBarTop />
       <Hero />
       <Careers />

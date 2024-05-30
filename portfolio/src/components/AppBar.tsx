@@ -7,11 +7,11 @@ const AppBarTop = () => {
       sx={{
         background: "#F5F5F5",
         boxShadow: "none",
-        paddingX: { xs: 2, md: 32 },
+        px: { xs: 2, md: 24, lg: 32, xl: 48 },
         paddingTop: { xs: 2, md: 16 },
       }}
     >
-      <Toolbar>
+      <Toolbar sx={{ px: "0 !important" }}>
         <Typography
           fontFamily={"staatliches"}
           width={"100%"}
