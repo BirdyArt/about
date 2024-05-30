@@ -22,7 +22,7 @@ const Works = () => {
     {
       title: "Portfolio",
       description:
-        "Task scheduler full-stack app build with ChakraUI, NestJS and Prisma and deployed to Azure Container App using CI/CD. Users can signup/login, CRUD tasks, and use nice drag and drop feature.",
+        "My personal portfolio build with MaterialUI, Typescript, and Vite. It is fast, lightweight and fully responsive.",
       image: "/briefcase.svg",
       githubUrl: "https://github.com/BirdyArt/about",
       demoUrl: "",
@@ -30,7 +30,7 @@ const Works = () => {
     {
       title: "Old works",
       description:
-        "Task scheduler full-stack app build with ChakraUI, NestJS and Prisma and deployed to Azure Container App using CI/CD. Users can signup/login, CRUD tasks, and use nice drag and drop feature.",
+        "Old portfolio (circa 2022) built with Svelte, Vite, and Tailwind CSS. It contain some of my old works and projects (5 of them) that I built by myself or in a team.",
       image: "/old.svg",
       githubUrl: "https://github.com/BirdyArt/portfolio",
       demoUrl: "",
