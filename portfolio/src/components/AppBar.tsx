@@ -7,12 +7,21 @@ const AppBarTop = () => {
       sx={{
         background: "#F5F5F5",
         boxShadow: "none",
-        paddingX: 32,
-        paddingTop: 16,
+        paddingX: { xs: 2, md: 32 },
+        paddingTop: { xs: 2, md: 16 },
       }}
     >
       <Toolbar>
-        <Typography variant="h3" color="#000000" fontWeight={300}>
+        <Typography
+          fontFamily={"staatliches"}
+          width={"100%"}
+          fontSize={52}
+          lineHeight={"40px"}
+          fontWeight={600}
+          pt={2}
+          textAlign={{ xs: "center", md: "left" }}
+          color="black"
+        >
           Artem Sobolev
         </Typography>
       </Toolbar>

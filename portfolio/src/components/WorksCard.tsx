@@ -28,7 +28,7 @@ const WorksCard = ({
     <Card
       sx={{
         height: "100%",
-        display: "flex",
+        display: { xs: "block", md: "flex" },
         flexDirection: "column",
         justifyContent: "space-between",
       }}
@@ -48,7 +48,7 @@ const WorksCard = ({
         />
         <Typography
           fontFamily={"staatliches"}
-          fontSize={52}
+          fontSize={42}
           lineHeight={"40px"}
           fontWeight={600}
           pt={2}
