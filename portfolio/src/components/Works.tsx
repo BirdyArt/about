@@ -25,7 +25,7 @@ const Works = () => {
         "My personal portfolio build with MaterialUI, Typescript, and Vite. It is fast, lightweight and fully responsive.",
       image: "/briefcase.svg",
       githubUrl: "https://github.com/BirdyArt/about",
-      demoUrl: "",
+      demoUrl: "https://portfolio-artem.azurewebsites.net/",
     },
     {
       title: "Old works",
@@ -33,7 +33,7 @@ const Works = () => {
         "Old portfolio (circa 2022) built with Svelte, Vite, and Tailwind CSS. It contain some of my old works and projects (5 of them) that I built by myself or in a team.",
       image: "/old.svg",
       githubUrl: "https://github.com/BirdyArt/portfolio",
-      demoUrl: "",
+      demoUrl: "https://portfolio-old.azurewebsites.net/",
     },
   ];
 
