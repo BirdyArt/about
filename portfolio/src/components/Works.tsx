@@ -25,7 +25,7 @@ const Works = () => {
         "My personal portfolio build with MaterialUI, Typescript, and Vite. It is fast, lightweight and fully responsive.",
       image: "/briefcase.svg",
       githubUrl: "https://github.com/BirdyArt/about",
-      demoUrl: "https://portfolio-artem.azurewebsites.net/",
+      demoUrl: "",
     },
     {
       title: "Old works",
