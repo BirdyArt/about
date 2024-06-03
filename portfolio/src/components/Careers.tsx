@@ -7,7 +7,7 @@ import {
   TimelineContent,
   timelineItemClasses,
 } from "@mui/lab";
-import { Box, Link, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import TimelineOppositeContent, {
   timelineOppositeContentClasses,
 } from "@mui/lab/TimelineOppositeContent";
@@ -25,7 +25,7 @@ const Careers = () => {
       display={{ xs: "block", md: "flex" }}
       justifyContent={"center"}
       alignItems={"center"}
-      px={{ xs: 2, md: 24, lg: 32, xl: 48 }}
+      px={{ xs: 2, md: 24 }}
     >
       <Box>
         <Typography
@@ -59,17 +59,7 @@ const Careers = () => {
               <Typography variant="h6">
                 Frontend Software Developer @ Merchant Growth
               </Typography>
-              <Typography variant="body2">
-                Vancouver |{" "}
-                <Link
-                  href="https://merchantgrowth.com"
-                  color="text.secondary"
-                  target="_blank"
-                  sx={{ textDecoration: "none" }}
-                >
-                  website link
-                </Link>
-              </Typography>
+              <Typography variant="body2">Vancouver, BC</Typography>
               <Typography variant="body1" mt={2}>
                 As a frontend software developer, I am responsible for
                 developing customer facing and internal UI and working closely
@@ -102,17 +92,7 @@ const Careers = () => {
               <Typography variant="h6">
                 Software Developer @ IdyaFlow
               </Typography>
-              <Typography variant="body2">
-                Vancouver |{" "}
-                <Link
-                  href="https://www.idyaflow.com/"
-                  target="_blank"
-                  color="text.secondary"
-                  sx={{ textDecoration: "none" }}
-                >
-                  website link
-                </Link>
-              </Typography>
+              <Typography variant="body2">Vancouver, BC</Typography>
               <Typography variant="body1" mt={2}>
                 As a software developer, I completely overhauled all company's
                 marketplace apps UI (boat renting, baby gear marketplace etc.)
@@ -142,17 +122,7 @@ const Careers = () => {
               <Typography variant="h6">
                 Frontend Software Developer / Facilitator @ Chingu
               </Typography>
-              <Typography variant="body2">
-                Vancouver |{" "}
-                <Link
-                  href="https://www.chingu.io/"
-                  target="_blank"
-                  color="text.secondary"
-                  sx={{ textDecoration: "none" }}
-                >
-                  website link
-                </Link>
-              </Typography>
+              <Typography variant="body2">Vancouver, BC</Typography>
               <Typography variant="body1" mt={2}>
                 As a frontend software developer, I was working on various
                 projects with people from all over the world. I was helping
@@ -181,17 +151,7 @@ const Careers = () => {
               <Typography variant="h6">
                 Dark times before I switched to Tech @ Non-tech jobs
               </Typography>
-              <Typography variant="body2">
-                Canada |{" "}
-                <Link
-                  href="https://www.mapcrunch.com/"
-                  target="_blank"
-                  color="text.secondary"
-                  sx={{ textDecoration: "none" }}
-                >
-                  website link
-                </Link>
-              </Typography>
+              <Typography variant="body2">Vancouver, BC</Typography>
               <Typography variant="body1" mt={2}>
                 I did a lot of different jobs before I switched to tech. I was a
                 coffee shop manager on Commercial Drive, product coordinator
