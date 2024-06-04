@@ -1,7 +1,7 @@
 import { Box, IconButton, Typography } from "@mui/material";
 import { Fade } from "react-awesome-reveal";
 import Typewriter from "./TypeWriter";
-import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
+import { GithubLogo, LinkedinLogo, ReadCvLogo } from "@phosphor-icons/react";
 
 const Hero = () => {
   return (
@@ -39,19 +39,55 @@ const Hero = () => {
               and frameworks. I really value clean and readable code. Also I'm
               very passionate about UX / UI.
             </Typography>
-            <Box display={"flex"}>
-              {" "}
+            <Box
+              display={"flex"}
+              py={1}
+              justifyContent={{ xs: "center", md: "start" }}
+            >
               <IconButton
-                sx={{ bgcolor: "black", color: "white" }}
-                aria-label="add to shopping cart"
+                href="/cv.pdf"
+                download
+                sx={{
+                  bgcolor: "black",
+                  color: "#F5F5F5",
+                  mr: 2,
+                  "&:hover": {
+                    backgroundColor: "text.secondary",
+                  },
+                }}
+                aria-label="read cv link"
               >
-                <GithubLogo />
+                <ReadCvLogo />
               </IconButton>
               <IconButton
-                sx={{ bgcolor: "black", color: "white" }}
-                aria-label="add to shopping cart"
+                href="https://www.linkedin.com/in/artem-sobolev/"
+                target="_blank"
+                sx={{
+                  bgcolor: "black",
+                  color: "#F5F5F5",
+                  mr: 2,
+                  "&:hover": {
+                    backgroundColor: "text.secondary",
+                  },
+                }}
+                aria-label="linkedin link"
               >
                 <LinkedinLogo />
+              </IconButton>
+              <IconButton
+                href="https://github.com/BirdyArt"
+                target="_blank"
+                sx={{
+                  bgcolor: "black",
+                  color: "#F5F5F5",
+                  mr: 2,
+                  "&:hover": {
+                    backgroundColor: "text.secondary",
+                  },
+                }}
+                aria-label="github link"
+              >
+                <GithubLogo />
               </IconButton>
             </Box>
           </Fade>

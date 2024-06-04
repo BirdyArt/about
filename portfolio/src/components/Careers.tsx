@@ -104,7 +104,7 @@ const Careers = () => {
                   </Typography>
                 ) : null}
                 <Typography variant="h6">
-                  Software Developer @ IdyaFlow
+                  Frontend Software Developer @ IdyaFlow
                 </Typography>
                 <Typography variant="body2">Vancouver, BC</Typography>
                 <Typography variant="body1" mt={2}>
