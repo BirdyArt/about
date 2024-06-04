@@ -11,15 +11,7 @@ import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import TimelineOppositeContent, {
   timelineOppositeContentClasses,
 } from "@mui/lab/TimelineOppositeContent";
-import {
-  Bounce,
-  Fade,
-  Flip,
-  Hinge,
-  JackInTheBox,
-  Rotate,
-  Slide,
-} from "react-awesome-reveal";
+import { Fade, JackInTheBox } from "react-awesome-reveal";
 
 const Careers = () => {
   const theme = useTheme();
