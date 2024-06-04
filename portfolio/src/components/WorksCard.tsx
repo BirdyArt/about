@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { GithubLogo, Play } from "@phosphor-icons/react";
+import { Fade } from "react-awesome-reveal";
 
 type WorksCardProps = {
   title: string;
@@ -39,71 +40,73 @@ const WorksCard = ({
         },
       }}
     >
-      <Box
-        pt={2}
-        display="flex"
-        alignItems={"center"}
-        justifyContent={"center"}
-        flexDirection={"column"}
-      >
-        <CardMedia
-          sx={{ maxHeight: 160, objectFit: "contain" }}
-          component="img"
-          image={image}
-          title="birdy task app"
-        />
-        <Typography
-          fontFamily={"staatliches"}
-          fontSize={42}
-          lineHeight={"40px"}
-          fontWeight={600}
+      <Fade triggerOnce>
+        <Box
           pt={2}
-          textAlign={"center"}
+          display="flex"
+          alignItems={"center"}
+          justifyContent={"center"}
+          flexDirection={"column"}
         >
-          {title}
-        </Typography>
-        <CardContent>
-          <Typography variant="body1" mt={1}>
-            {description}
+          <CardMedia
+            sx={{ maxHeight: 160, objectFit: "contain" }}
+            component="img"
+            image={image}
+            title="birdy task app"
+          />
+          <Typography
+            fontFamily={"staatliches"}
+            fontSize={42}
+            lineHeight={"40px"}
+            fontWeight={600}
+            pt={2}
+            textAlign={"center"}
+          >
+            {title}
           </Typography>
-        </CardContent>
-      </Box>
-      <CardActions sx={{ marginBottom: 1, marginX: 1 }}>
-        {githubUrl ? (
-          <Button
-            fullWidth
-            startIcon={<GithubLogo />}
-            href={githubUrl}
-            target="_blank"
-            sx={{
-              color: "white",
-              bgcolor: "#333",
-              "&:hover": {
-                backgroundColor: "text.secondary",
-              },
-            }}
-          >
-            Github
-          </Button>
-        ) : null}
-        {demoUrl ? (
-          <Button
-            fullWidth
-            startIcon={<Play />}
-            href={demoUrl}
-            target="_blank"
-            sx={{
-              color: "white",
-              bgcolor: "#333",
-              "&:hover": {
-                backgroundColor: "text.secondary",
-              },
-            }}
-          >
-            Demo
-          </Button>
-        ) : null}
-      </CardActions>
+          <CardContent>
+            <Typography variant="body1" mt={1}>
+              {description}
+            </Typography>
+          </CardContent>
+        </Box>
+        <CardActions sx={{ marginBottom: 1, marginX: 1 }}>
+          {githubUrl ? (
+            <Button
+              fullWidth
+              startIcon={<GithubLogo />}
+              href={githubUrl}
+              target="_blank"
+              sx={{
+                color: "white",
+                bgcolor: "#333",
+                "&:hover": {
+                  backgroundColor: "text.secondary",
+                },
+              }}
+            >
+              Github
+            </Button>
+          ) : null}
+          {demoUrl ? (
+            <Button
+              fullWidth
+              startIcon={<Play />}
+              href={demoUrl}
+              target="_blank"
+              sx={{
+                color: "white",
+                bgcolor: "#333",
+                "&:hover": {
+                  backgroundColor: "text.secondary",
+                },
+              }}
+            >
+              Demo
+            </Button>
+          ) : null}
+        </CardActions>
+      </Fade>
     </Card>
   );
 };
