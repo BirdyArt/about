@@ -1,4 +1,5 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import { JackInTheBox } from "react-awesome-reveal";
 
 const AppBarTop = () => {
   return (
@@ -12,18 +13,22 @@ const AppBarTop = () => {
       }}
     >
       <Toolbar sx={{ px: "0 !important" }}>
-        <Typography
-          fontFamily={"staatliches"}
-          width={"100%"}
-          fontSize={52}
-          lineHeight={"40px"}
-          fontWeight={600}
-          pt={2}
-          textAlign={{ xs: "center", md: "left" }}
-          color="black"
-        >
-          Artem Sobolev
-        </Typography>
+        <Box width={{ xs: "100%", md: "auto" }}>
+          <JackInTheBox triggerOnce>
+            <Typography
+              fontFamily={"staatliches"}
+              width={"100%"}
+              fontSize={52}
+              lineHeight={"40px"}
+              fontWeight={600}
+              pt={2}
+              textAlign={{ xs: "center", md: "left" }}
+              color="black"
+            >
+              Artem Sobolev
+            </Typography>
+          </JackInTheBox>
+        </Box>
       </Toolbar>
     </AppBar>
   );
