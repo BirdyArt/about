@@ -1,7 +1,8 @@
 import { Box, IconButton, Typography } from "@mui/material";
 import { Fade } from "react-awesome-reveal";
 import Typewriter from "./TypeWriter";
-import { GithubLogo, LinkedinLogo, ReadCvLogo } from "@phosphor-icons/react";
+import { FilePdf, GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -44,51 +45,73 @@ const Hero = () => {
               py={1}
               justifyContent={{ xs: "center", md: "start" }}
             >
-              <IconButton
-                href="/cv.pdf"
-                download
-                sx={{
-                  bgcolor: "black",
-                  color: "#F5F5F5",
-                  mr: 2,
-                  "&:hover": {
-                    backgroundColor: "text.secondary",
-                  },
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                whileTap={{
+                  scale: 0.8,
                 }}
-                aria-label="read cv link"
               >
-                <ReadCvLogo />
-              </IconButton>
-              <IconButton
-                href="https://www.linkedin.com/in/artem-sobolev/"
-                target="_blank"
-                sx={{
-                  bgcolor: "black",
-                  color: "#F5F5F5",
-                  mr: 2,
-                  "&:hover": {
-                    backgroundColor: "text.secondary",
-                  },
+                <IconButton
+                  href="/cv.pdf"
+                  download
+                  type="contained"
+                  sx={{
+                    bgcolor: "black",
+                    color: "#F5F5F5",
+                    mr: 2,
+                    "&:hover": {
+                      backgroundColor: "text.secondary",
+                    },
+                  }}
+                  aria-label="read cv link"
+                >
+                  <FilePdf />
+                </IconButton>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                whileTap={{
+                  scale: 0.8,
                 }}
-                aria-label="linkedin link"
               >
-                <LinkedinLogo />
-              </IconButton>
-              <IconButton
-                href="https://github.com/BirdyArt"
-                target="_blank"
-                sx={{
-                  bgcolor: "black",
-                  color: "#F5F5F5",
-                  mr: 2,
-                  "&:hover": {
-                    backgroundColor: "text.secondary",
-                  },
+                <IconButton
+                  href="https://www.linkedin.com/in/artem-sobolev/"
+                  target="_blank"
+                  sx={{
+                    bgcolor: "black",
+                    color: "#F5F5F5",
+                    mr: 2,
+                    "&:hover": {
+                      backgroundColor: "text.secondary",
+                    },
+                  }}
+                  aria-label="linkedin link"
+                >
+                  <LinkedinLogo />
+                </IconButton>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                whileTap={{
+                  scale: 0.8,
                 }}
-                aria-label="github link"
               >
-                <GithubLogo />
-              </IconButton>
+                <IconButton
+                  href="https://github.com/BirdyArt"
+                  target="_blank"
+                  sx={{
+                    bgcolor: "black",
+                    color: "#F5F5F5",
+                    mr: 2,
+                    "&:hover": {
+                      backgroundColor: "text.secondary",
+                    },
+                  }}
+                  aria-label="github link"
+                >
+                  <GithubLogo />
+                </IconButton>
+              </motion.div>
             </Box>
           </Fade>
         </Box>

@@ -1,5 +1,6 @@
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import { JackInTheBox } from "react-awesome-reveal";
+import { NavLink } from "react-router-dom";
 
 const AppBarTop = () => {
   return (
@@ -28,6 +29,42 @@ const AppBarTop = () => {
               Artem Sobolev
             </Typography>
           </JackInTheBox>
+          <NavLink to="/" style={{ textDecoration: "none" }}>
+            <Typography
+              fontFamily={"montserrat"}
+              fontSize={20}
+              lineHeight={"24px"}
+              fontWeight={400}
+              textAlign={{ xs: "center", md: "left" }}
+              color="black"
+            >
+              Home
+            </Typography>
+          </NavLink>
+          <NavLink to="/careers" style={{ textDecoration: "none" }}>
+            <Typography
+              fontFamily={"montserrat"}
+              fontSize={20}
+              lineHeight={"24px"}
+              fontWeight={400}
+              textAlign={{ xs: "center", md: "left" }}
+              color="black"
+            >
+              Careers
+            </Typography>
+          </NavLink>
+          <NavLink to="/works" style={{ textDecoration: "none" }}>
+            <Typography
+              fontFamily={"montserrat"}
+              fontSize={20}
+              lineHeight={"24px"}
+              fontWeight={400}
+              textAlign={{ xs: "center", md: "left" }}
+              color="black"
+            >
+              Works
+            </Typography>
+          </NavLink>
         </Box>
       </Toolbar>
     </AppBar>
