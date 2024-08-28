@@ -1,6 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
 import WorksCard from "./WorksCard";
-import { JackInTheBox } from "react-awesome-reveal";
 
 const Works = () => {
   const works = [
@@ -48,20 +47,18 @@ const Works = () => {
       pb={4}
     >
       <Box>
-        <JackInTheBox triggerOnce>
-          <Typography
-            fontFamily={"staatliches"}
-            fontSize={32}
-            lineHeight={"40px"}
-            fontWeight={600}
-            pb={4}
-            pt={4}
-            textAlign={"center"}
-            color="black"
-          >
-            Works
-          </Typography>
-        </JackInTheBox>
+        <Typography
+          fontFamily={"staatliches"}
+          fontSize={32}
+          lineHeight={"40px"}
+          fontWeight={600}
+          pb={4}
+          pt={4}
+          textAlign={"center"}
+          color="black"
+        >
+          Works
+        </Typography>
         <Grid container spacing={4}>
           {works.map((work) => (
             <Grid item xs={12} md={6} lg={4} xl={3}>
