@@ -4,59 +4,56 @@ import AppBarTop from "./components/AppBar";
 import Hero from "./components/Hero";
 import Careers from "./components/Careers";
 import Works from "./components/Works";
-import { Box } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { useEffect } from "react";
-
-const blackBox = {
-  initial: {
-    height: "100%",
-    bottom: 0,
-  },
-  animate: {
-    height: 0,
-    transition: {
-      when: "afterChildren",
-      duration: 1.5,
-      ease: [0.87, 0, 0.13, 1],
-    },
-  },
-};
-
-const textContainer = {
-  initial: {
-    opacity: 1,
-    height: "100px",
-  },
-  animate: {
-    opacity: 0,
-    height: 0,
-    transition: {
-      // opacity: { duration: 0.3 },
-      // height: { duration: 1.5, ease: [0.87, 0, 0.13, 1] },
-      duration: 0.3,
-      when: "afterChildren",
-    },
-  },
-};
-
-const text = {
-  initial: {
-    y: 0,
-  },
-  animate: {
-    y: 54,
-    transition: {
-      duration: 1.7,
-      ease: [0.87, 0, 0.13, 1],
-    },
-  },
-};
+import AboutMe from "./components/AboutMe";
 
 const InitialTransition = () => {
-  // Scroll user to top to avoid showing the footer
-  useEffect(() => {
-    typeof window !== "undefined" && window.scrollTo(0, 0);
-  }, []);
+  const theme = useTheme();
+  const desktop = useMediaQuery(theme.breakpoints.up("md"));
+
+  const blackBox = {
+    initial: {
+      height: "100%",
+      bottom: 0,
+    },
+    animate: {
+      height: 0,
+      transition: {
+        when: "afterChildren",
+        duration: 1.5,
+        ease: [0.87, 0, 0.13, 1],
+      },
+    },
+  };
+
+  const textContainer = {
+    initial: {
+      opacity: 1,
+      height: desktop ? "8vw" : "12vh",
+    },
+    animate: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        duration: 0.3,
+        when: "afterChildren",
+      },
+    },
+  };
+
+  const text = {
+    initial: {
+      y: 0,
+    },
+    animate: {
+      y: desktop ? "4.1vw" : "6.1vh",
+      transition: {
+        duration: 2,
+        ease: [0.87, 0, 0.13, 1],
+      },
+    },
+  };
 
   return (
     <motion.div
@@ -112,7 +109,7 @@ const InitialTransition = () => {
           y="50%"
           style={{
             fill: "url(#pattern)",
-            fontSize: "4rem",
+            fontSize: desktop ? "4vw" : "6vh",
             fontWeight: 700,
             fontFamily: "staatliches",
           }}
@@ -129,7 +126,7 @@ function App() {
     <BrowserRouter>
       <InitialTransition />
       <Box bgcolor={"#F7F7F7"}>
-        <AppBarTop />
+        {/* <AppBarTop /> */}
         <LocationProvider>
           <RoutesWithAnimation />
         </LocationProvider>
@@ -149,6 +146,7 @@ function RoutesWithAnimation() {
     <Routes location={location} key={location.key}>
       <Route path="/" element={<Hero />} />
       <Route path="/careers" element={<Careers />} />
+      <Route path="/about" element={<AboutMe />} />
       <Route path="/works" element={<Works />} />
     </Routes>
   );
