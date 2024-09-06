@@ -68,11 +68,11 @@ const Careers = () => {
                   </Typography>
                 ) : null}
                 <Typography variant="h6">
-                  Frontend Software Developer @ Merchant Growth
+                  Front-end Software Developer @ Merchant Growth
                 </Typography>
                 <Typography variant="body2">Vancouver, BC</Typography>
                 <Typography variant="body1" mt={2}>
-                  As a frontend software developer, I am responsible for
+                  As a front-end software developer, I am responsible for
                   developing customer facing and internal UI and working closely
                   with the product team to deliver the best user experience.
                   Occasionally I would help backend team with smaller tasks in
@@ -101,7 +101,7 @@ const Careers = () => {
                   </Typography>
                 ) : null}
                 <Typography variant="h6">
-                  Frontend Software Developer @ IdyaFlow
+                  Front end Software Developer @ IdyaFlow
                 </Typography>
                 <Typography variant="body2">Vancouver, BC</Typography>
                 <Typography variant="body1" mt={2}>
@@ -131,11 +131,11 @@ const Careers = () => {
                   </Typography>
                 ) : null}
                 <Typography variant="h6">
-                  Frontend Software Developer / Facilitator @ Chingu
+                  Front-end Software Developer / Facilitator @ Chingu
                 </Typography>
                 <Typography variant="body2">Vancouver, BC</Typography>
                 <Typography variant="body1" mt={2}>
-                  As a frontend software developer, I was working on various
+                  As a front-end software developer, I was working on various
                   projects with people from all over the world. I was helping
                   facilitate teams and was responsible for delivering projects
                   on time. I was also helping with the code reviews and

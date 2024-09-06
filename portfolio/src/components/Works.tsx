@@ -14,7 +14,7 @@ const Works = () => {
     {
       title: "Boilerplate",
       description:
-        "Modern frontend boilerplate with extensive testing (unit tests with Vitest, component tests using Playwright in three major browsers, all working perfectly in CI/CD), Storybook and fully containerized.",
+        "Modern front-end boilerplate with extensive testing (unit tests with Vitest, component tests using Playwright in three major browsers, all working perfectly in CI/CD), Storybook and fully containerized.",
       image: "/flask.svg",
       githubUrl: "https://github.com/BirdyArt/template",
       demoUrl: "",

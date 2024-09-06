@@ -6,6 +6,7 @@ import useVariants from "../hooks/useVariants";
 import HeroPanel from "./HeroPanel";
 import SidePanel from "./SidePanel";
 import BottomPanel from "./BottomPanel";
+import AboutMe from "./AboutMe";
 
 const Main = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +16,14 @@ const Main = () => {
   const { button } = variants;
 
   return (
-    <Box display={desktop ? "flex" : "block"} overflow={"hidden"}>
+    <Box
+      display={desktop ? "flex" : "flex"}
+      flexDirection={desktop ? "row" : "column"}
+      overflow={"hidden"}
+      position="relative"
+    >
       <HeroPanel isOpen={isOpen} />
+      <AboutMe isOpen={isOpen} />
       {desktop ? (
         <SidePanel isOpen={isOpen} />
       ) : (
@@ -29,6 +36,7 @@ const Main = () => {
           position: "absolute",
           top: desktop ? "50%" : "85%",
           left: desktop ? "90%" : "50%",
+          zIndex: 1,
         }}
       >
         <IconButton

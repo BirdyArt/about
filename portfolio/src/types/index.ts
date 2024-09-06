@@ -9,4 +9,5 @@ export type UseVariantsReturn = {
   box3: Variants;
   box4: Variants;
   button: Variants;
+  aboutMe: Variants;
 };

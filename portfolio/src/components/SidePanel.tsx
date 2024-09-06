@@ -166,7 +166,7 @@ const SidePanel = ({ isOpen }: { isOpen: boolean }) => {
             fontWeight={600}
             color="black"
           >
-            frontend developer
+            front-end developer
           </Typography>
         </Box>
       </motion.div>

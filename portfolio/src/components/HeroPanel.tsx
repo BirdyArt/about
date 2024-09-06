@@ -21,6 +21,7 @@ const HeroPanel = ({ isOpen }: { isOpen: boolean }) => {
         height: desktop ? "100vh" : "85vh",
         width: desktop ? "90vw" : "100vw",
         x: 0,
+        zIndex: 1,
         backgroundColor: "#F7F7F7",
         borderRightColor: "black",
         borderRightStyle: "solid",
@@ -31,7 +32,7 @@ const HeroPanel = ({ isOpen }: { isOpen: boolean }) => {
         display: "flex",
         alignItems: "center",
         justifyContent: desktop ? "left" : "center",
-        marginLeft: desktop ? "12vw" : 0,
+        paddingLeft: desktop ? "12vw" : 0,
       }}
       animate={!isOpen ? "open" : "closed"}
       variants={box1}
@@ -67,7 +68,7 @@ const HeroPanel = ({ isOpen }: { isOpen: boolean }) => {
           color="black"
           textAlign={desktop ? "left" : "center"}
         >
-          frontend developer
+          front-end developer
         </Typography>
         <Box
           display={"flex"}

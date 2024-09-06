@@ -130,5 +130,12 @@ export default function useVariants(): UseVariantsReturn {
         },
       },
     },
+    aboutMe: {
+      open: {
+        opacity: 1,
+        transition: { opacity: { duration: 1, delay: 1.2 } },
+      },
+      closed: { opacity: 0 },
+    },
   };
 }
