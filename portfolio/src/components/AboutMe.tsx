@@ -23,18 +23,6 @@ const AboutMe = ({ isOpen }: { isOpen: boolean }) => {
         mx: desktop ? 4 : 0,
       }}
     >
-      {desktop ? null : (
-        <Typography
-          fontFamily={"staatliches"}
-          width={"100%"}
-          fontSize={"8vh"}
-          fontWeight={600}
-          color="black"
-          ml={8}
-        >
-          About Me
-        </Typography>
-      )}
       <motion.div
         style={{
           display: "flex",
@@ -46,19 +34,17 @@ const AboutMe = ({ isOpen }: { isOpen: boolean }) => {
         variants={aboutMe}
       >
         <Box>
-          {desktop ? (
-            <Box ml={4}>
-              <Typography
-                fontFamily={"staatliches"}
-                width={"100%"}
-                fontSize={desktop ? "4vw" : "8vh"}
-                fontWeight={600}
-                color="black"
-              >
-                About Me
-              </Typography>
-            </Box>
-          ) : null}
+          <Box ml={4}>
+            <Typography
+              fontFamily={"staatliches"}
+              width={"100%"}
+              fontSize={desktop ? "4vw" : "8vh"}
+              fontWeight={600}
+              color="black"
+            >
+              About Me
+            </Typography>
+          </Box>
           <Typography
             sx={{
               typography: { xs: "body1", md: "h6" },
