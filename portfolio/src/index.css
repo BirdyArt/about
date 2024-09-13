@@ -6,4 +6,10 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-snap-type: y mandatory;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }

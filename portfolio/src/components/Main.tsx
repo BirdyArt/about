@@ -6,7 +6,7 @@ import useVariants from "../hooks/useVariants";
 import HeroPanel from "./HeroPanel";
 import SidePanel from "./SidePanel";
 import BottomPanel from "./BottomPanel";
-import AboutMe from "./AboutMe";
+import Container from "./Container";
 
 const Main = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ const Main = () => {
       position="relative"
     >
       <HeroPanel isOpen={isOpen} />
-      <AboutMe isOpen={isOpen} />
+      <Container isOpen={isOpen} />
       {desktop ? (
         <SidePanel isOpen={isOpen} />
       ) : (

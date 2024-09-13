@@ -2,7 +2,11 @@ import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import useVariants from "../hooks/useVariants";
 
-const AboutMe = ({ isOpen }: { isOpen: boolean }) => {
+const AboutMe = ({
+  setCurrentPage,
+}: {
+  setCurrentPage: (currentPage: string) => void;
+}) => {
   const theme = useTheme();
   const desktop = useMediaQuery(theme.breakpoints.up("md"));
   const variants = useVariants();
@@ -10,47 +14,23 @@ const AboutMe = ({ isOpen }: { isOpen: boolean }) => {
 
   return (
     <Box
+      height={desktop ? "100vh" : "85vh"}
       sx={{
-        position: "absolute",
-        zIndex: 0,
-        height: desktop ? "100vh" : "85vh",
-        width: desktop ? "90vw" : "100%",
         display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
+        flexDirection: desktop ? "row" : "column",
+        justifyContent: "center",
         alignItems: "center",
-        overflow: "hidden",
-        mx: desktop ? 4 : 0,
+        scrollSnapAlign: "center",
       }}
     >
-      <motion.div
-        style={{
-          display: "flex",
-          flexDirection: desktop ? "row" : "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        animate={isOpen ? "open" : "closed"}
-        variants={aboutMe}
-      >
-        <Box>
-          <Box ml={4}>
-            <Typography
-              fontFamily={"staatliches"}
-              width={"100%"}
-              fontSize={desktop ? "4vw" : "8vh"}
-              fontWeight={600}
-              color="black"
-            >
-              About Me
-            </Typography>
-          </Box>
+      <motion.div initial="offscreen" whileInView="onscreen">
+        <motion.div variants={aboutMe}>
           <Typography
             sx={{
               typography: { xs: "body1", md: "h6" },
               fontWeight: { xs: "400", md: "300 !important" },
               mx: desktop ? 4 : 4,
-              mt: 1,
+              mt: desktop ? 0 : "14vh",
               maxWidth: desktop ? "30vw" : "100%",
             }}
           >
@@ -60,18 +40,27 @@ const AboutMe = ({ isOpen }: { isOpen: boolean }) => {
             strong work ethic. From sleek and modern UI to interactive
             feautures, I leverage latest tech to bring ideas to life.
           </Typography>
-        </Box>
-        <Box
-          component="img"
-          src="/me.jpg"
-          alt="profile picture"
-          sx={{
-            filter: "grayscale(100%)",
-            maxWidth: { xs: "60vw", md: "25vw" },
-            borderRadius: "16px",
-            my: 4,
-          }}
-        />
+        </motion.div>
+      </motion.div>
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        onViewportEnter={() => setCurrentPage("about me")}
+        viewport={{ amount: 0.7 }}
+      >
+        <motion.div variants={aboutMe}>
+          <Box
+            component="img"
+            src="/me.jpg"
+            alt="profile picture"
+            sx={{
+              filter: "grayscale(100%)",
+              maxWidth: { xs: "60vw", md: "25vw" },
+              borderRadius: "16px",
+              my: 4,
+            }}
+          />
+        </motion.div>
       </motion.div>
     </Box>
   );

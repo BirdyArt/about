@@ -131,6 +131,26 @@ export default function useVariants(): UseVariantsReturn {
       },
     },
     aboutMe: {
+      offscreen: {
+        y: 50,
+        filter: "blur(5px)",
+        transition: {
+          type: "spring",
+          bounce: 0.4,
+          duration: 1,
+        },
+      },
+      onscreen: {
+        y: 0,
+        filter: "blur(0px)",
+        transition: {
+          type: "spring",
+          bounce: 0.4,
+          duration: 1,
+        },
+      },
+    },
+    container: {
       open: {
         opacity: 1,
         transition: { opacity: { duration: 1, delay: 1.2 } },
