@@ -1,7 +1,18 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, useMediaQuery, useTheme } from "@mui/material";
 import WorksCard from "../components/WorksCard";
+import { motion } from "framer-motion";
+import useVariants from "../hooks/useVariants";
 
-const Works = () => {
+const Works = ({
+  setCurrentPage,
+}: {
+  setCurrentPage: (currentPage: string) => void;
+}) => {
+  const theme = useTheme();
+  const desktop = useMediaQuery(theme.breakpoints.up("md"));
+  const variants = useVariants();
+  const { aboutMe } = variants;
+
   const works = [
     {
       title: "Birdy Task",
@@ -39,40 +50,37 @@ const Works = () => {
 
   return (
     <Box
-      height={"100%"}
-      display={{ xs: "block", md: "flex" }}
-      justifyContent={"center"}
-      alignItems={"center"}
-      px={{ xs: 4, md: 24 }}
-      pb={4}
+      height={desktop ? "100vh" : "85vh"}
+      sx={{
+        display: "flex",
+        flexDirection: desktop ? "row" : "column",
+        justifyContent: "center",
+        alignItems: "center",
+        scrollSnapAlign: "center",
+      }}
     >
-      <Box>
-        <Typography
-          fontFamily={"staatliches"}
-          fontSize={32}
-          lineHeight={"40px"}
-          fontWeight={600}
-          pb={4}
-          pt={4}
-          textAlign={"center"}
-          color="black"
-        >
-          Works
-        </Typography>
-        <Grid container spacing={4}>
-          {works.map((work) => (
-            <Grid item xs={12} md={6} lg={4} xl={3}>
-              <WorksCard
-                title={work.title}
-                description={work.description}
-                image={work.image}
-                githubUrl={work.githubUrl}
-                demoUrl={work.demoUrl}
-              />
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        onViewportEnter={() => setCurrentPage("works")}
+        viewport={{ amount: 0.7 }}
+      >
+        <motion.div variants={aboutMe}>
+          <Grid container spacing={4}>
+            {works.map((work) => (
+              <Grid item xs={12} md={6}>
+                <WorksCard
+                  title={work.title}
+                  description={work.description}
+                  image={work.image}
+                  githubUrl={work.githubUrl}
+                  demoUrl={work.demoUrl}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </motion.div>
+      </motion.div>
     </Box>
   );
 };

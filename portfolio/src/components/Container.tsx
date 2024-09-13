@@ -6,6 +6,7 @@ import Header from "./Header";
 import AboutMe from "../pages/AboutMe";
 import Tools from "../pages/Tools";
 import Careers from "../pages/Careers";
+import Works from "../pages/Works";
 
 const Container = ({ isOpen }: { isOpen: boolean }) => {
   const theme = useTheme();
@@ -36,6 +37,7 @@ const Container = ({ isOpen }: { isOpen: boolean }) => {
         <AboutMe setCurrentPage={setCurrentPage} />
         <Tools setCurrentPage={setCurrentPage} />
         <Careers setCurrentPage={setCurrentPage} />
+        <Works setCurrentPage={setCurrentPage} />
       </motion.div>
     </Box>
   );
