@@ -4,6 +4,7 @@ import useVariants from "../hooks/useVariants";
 import { useRef, useState } from "react";
 import Header from "./Header";
 import AboutMe from "./AboutMe";
+import Tools from "./Tools";
 
 const Container = ({ isOpen }: { isOpen: boolean }) => {
   const theme = useTheme();
@@ -32,6 +33,7 @@ const Container = ({ isOpen }: { isOpen: boolean }) => {
       <motion.div animate={isOpen ? "open" : "closed"} variants={container}>
         <Header currentPage={currentPage} />
         <AboutMe setCurrentPage={setCurrentPage} />
+        <Tools setCurrentPage={setCurrentPage} />
       </motion.div>
     </Box>
   );
