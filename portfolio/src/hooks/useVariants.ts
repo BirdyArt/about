@@ -132,7 +132,7 @@ export default function useVariants(): UseVariantsReturn {
     },
     aboutMe: {
       offscreen: {
-        y: 50,
+        // y: 50,
         filter: "blur(5px)",
         transition: {
           type: "spring",
@@ -141,7 +141,7 @@ export default function useVariants(): UseVariantsReturn {
         },
       },
       onscreen: {
-        y: 0,
+        // y: 0,
         filter: "blur(0px)",
         transition: {
           type: "spring",

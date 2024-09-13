@@ -27,6 +27,7 @@ const Tools = ({
         initial="offscreen"
         whileInView="onscreen"
         onViewportEnter={() => setCurrentPage("tools")}
+        viewport={{ amount: 0.7 }}
       >
         <motion.div variants={aboutMe}>
           <Typography

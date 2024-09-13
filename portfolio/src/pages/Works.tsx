@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
-import WorksCard from "./WorksCard";
+import WorksCard from "../components/WorksCard";
 
 const Works = () => {
   const works = [

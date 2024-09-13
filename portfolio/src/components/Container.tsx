@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 import useVariants from "../hooks/useVariants";
 import { useRef, useState } from "react";
 import Header from "./Header";
-import AboutMe from "./AboutMe";
-import Tools from "./Tools";
+import AboutMe from "../pages/AboutMe";
+import Tools from "../pages/Tools";
+import Careers from "../pages/Careers";
 
 const Container = ({ isOpen }: { isOpen: boolean }) => {
   const theme = useTheme();
@@ -34,6 +35,7 @@ const Container = ({ isOpen }: { isOpen: boolean }) => {
         <Header currentPage={currentPage} />
         <AboutMe setCurrentPage={setCurrentPage} />
         <Tools setCurrentPage={setCurrentPage} />
+        <Careers setCurrentPage={setCurrentPage} />
       </motion.div>
     </Box>
   );
