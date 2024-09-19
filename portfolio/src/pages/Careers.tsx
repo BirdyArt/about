@@ -43,11 +43,17 @@ const Careers = ({
         initial="offscreen"
         whileInView="onscreen"
         onViewportEnter={() => setCurrentPage("careers")}
-        viewport={{ amount: 0.9 }}
+        viewport={{ amount: 0.7 }}
         style={{ overflow: "scroll" }}
       >
         <motion.div variants={aboutMe}>
-          <Box sx={{ mt: { xs: 10, lg: 0 }, mr: { xs: 0, lg: 12 } }}>
+          <Box
+            sx={{
+              my: { xs: 10, lg: 0 },
+              mr: { xs: 0, lg: `calc(96px + 10vw)` },
+              ml: { xs: 0, lg: 18 },
+            }}
+          >
             <Timeline sx={styleSx}>
               <TimelineItem>
                 {desktop ? (

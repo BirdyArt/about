@@ -47,15 +47,15 @@ const WorksCard = ({
         flexDirection={"column"}
       >
         <CardMedia
-          sx={{ maxHeight: 160, objectFit: "contain" }}
+          sx={{ maxHeight: 60, objectFit: "contain" }}
           component="img"
           image={image}
           title="birdy task app"
         />
         <Typography
           fontFamily={"staatliches"}
-          fontSize={42}
-          lineHeight={"40px"}
+          fontSize={36}
+          lineHeight={"34px"}
           fontWeight={600}
           pt={2}
           textAlign={"center"}

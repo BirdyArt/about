@@ -56,7 +56,7 @@ const Works = ({
         flexDirection: desktop ? "row" : "column",
         justifyContent: "center",
         alignItems: "center",
-        scrollSnapAlign: "center",
+        scrollSnapAlign: "start",
       }}
     >
       <motion.div
@@ -64,9 +64,19 @@ const Works = ({
         whileInView="onscreen"
         onViewportEnter={() => setCurrentPage("works")}
         viewport={{ amount: 0.7 }}
+        style={{ overflow: "scroll" }}
       >
         <motion.div variants={aboutMe}>
-          <Grid container spacing={4}>
+          <Grid
+            container
+            spacing={4}
+            sx={{
+              my: { xs: 10, lg: 0 },
+              width: "inherit",
+              mr: { xs: 4, sm: 8, md: 10, lg: `calc(96px + 10vw)` },
+              ml: { xs: 0, sm: 4, md: 10, lg: 18 },
+            }}
+          >
             {works.map((work) => (
               <Grid item xs={12} md={6}>
                 <WorksCard
