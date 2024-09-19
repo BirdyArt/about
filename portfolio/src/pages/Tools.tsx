@@ -1,4 +1,4 @@
-import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import useVariants from "../hooks/useVariants";
 
@@ -11,6 +11,87 @@ const Tools = ({
   const desktop = useMediaQuery(theme.breakpoints.up("md"));
   const variants = useVariants();
   const { aboutMe } = variants;
+
+  const codeTools = [
+    {
+      title: "Javascript",
+      image: "/brands/javascript.svg",
+    },
+    {
+      title: "Typescript",
+      image: "/brands/typescript.svg",
+    },
+    {
+      title: "CSS3",
+      image: "/brands/css3.svg",
+    },
+    {
+      title: "HTML5",
+      image: "/brands/html5.svg",
+    },
+    {
+      title: "Prettier",
+      image: "/brands/prettier.svg",
+    },
+  ];
+
+  const frameworksTools = [
+    {
+      title: "React",
+      image: "/brands/react.svg",
+    },
+    {
+      title: "NextJS",
+      image: "/brands/nextdotjs.svg",
+    },
+    {
+      title: "MaterialUI",
+      image: "/brands/mui.svg",
+    },
+    {
+      title: "ChakraUI",
+      image: "/brands/chakraui.svg",
+    },
+    {
+      title: "TailwindCSS",
+      image: "/brands/tailwindcss.svg",
+    },
+    {
+      title: "NestJS",
+      image: "/brands/nestjs.svg",
+    },
+    {
+      title: "Prisma",
+      image: "/brands/prisma.svg",
+    },
+  ];
+
+  const operationsTools = [
+    {
+      title: "Azure",
+      image: "/brands/azure.svg",
+    },
+    {
+      title: "Docker",
+      image: "/brands/docker.svg",
+    },
+    {
+      title: "Github",
+      image: "/brands/github.svg",
+    },
+    {
+      title: "Git",
+      image: "/brands/git.svg",
+    },
+    {
+      title: "Cypress",
+      image: "/brands/cypress.svg",
+    },
+    {
+      title: "Jest",
+      image: "/brands/jest.svg",
+    },
+  ];
 
   return (
     <Box
@@ -39,11 +120,47 @@ const Tools = ({
               maxWidth: desktop ? "30vw" : "100%",
             }}
           >
-            Tools I use to build websites and applications include React,
-            Next.js, Material-UI, and Framer Motion. I also have experience with
-            TypeScript, GraphQL, and Node.js. I am always learning and
-            experimenting with new technologies to improve my skills and stay
-            up-to-date with the latest trends in web development.
+            <Grid container spacing={4}>
+              <Grid item xs={12} md={4}>
+                {codeTools.map(({ image, title }) => (
+                  <Box
+                    component="img"
+                    src={image}
+                    alt={`logo of ${title}`}
+                    sx={{
+                      height: "24px",
+                      maxWidth: "100%",
+                    }}
+                  />
+                ))}
+              </Grid>
+              <Grid item xs={12} md={4}>
+                {frameworksTools.map(({ image, title }) => (
+                  <Box
+                    component="img"
+                    src={image}
+                    alt={`logo of ${title}`}
+                    sx={{
+                      height: "24px",
+                      maxWidth: "100%",
+                    }}
+                  />
+                ))}
+              </Grid>
+              <Grid item xs={12} md={4}>
+                {operationsTools.map(({ image, title }) => (
+                  <Box
+                    component="img"
+                    src={image}
+                    alt={`logo of ${title}`}
+                    sx={{
+                      height: "24px",
+                      maxWidth: "100%",
+                    }}
+                  />
+                ))}
+              </Grid>
+            </Grid>
           </Typography>
         </motion.div>
       </motion.div>
