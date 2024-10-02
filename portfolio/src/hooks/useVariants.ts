@@ -29,7 +29,7 @@ export default function useVariants(): UseVariantsReturn {
         opacity: 0,
         height: 0,
         transition: {
-          duration: 0.3,
+          duration: 0.4,
           when: "afterChildren",
         },
       },
@@ -39,9 +39,9 @@ export default function useVariants(): UseVariantsReturn {
         y: 0,
       },
       animate: {
-        y: desktop ? "4.1%" : "6.1%",
+        y: "100%",
         transition: {
-          duration: 2,
+          duration: 3,
           ease: [0.87, 0, 0.13, 1],
         },
       },
