@@ -18,8 +18,8 @@ const HeroPanel = ({ isOpen }: { isOpen: boolean }) => {
   return (
     <motion.div
       style={{
-        height: desktop ? "100vh" : "85vh",
-        width: desktop ? "90vw" : "100vw",
+        height: desktop ? "100%" : "85%",
+        width: desktop ? "90%" : "100%",
         x: 0,
         zIndex: 1,
         backgroundColor: "#F7F7F7",
@@ -33,7 +33,7 @@ const HeroPanel = ({ isOpen }: { isOpen: boolean }) => {
         display: "flex",
         alignItems: "center",
         justifyContent: desktop ? "left" : "center",
-        paddingLeft: desktop ? "12vw" : 0,
+        paddingLeft: desktop ? "12%" : 0,
       }}
       animate={!isOpen ? "open" : "closed"}
       variants={box1}

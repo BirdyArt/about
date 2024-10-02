@@ -43,7 +43,6 @@ const Header = ({ currentPage }: { currentPage: string }) => {
         bgcolor: "transparent",
         boxShadow: "none",
         pt: 2,
-        backdropFilter: desktop ? "none" : "blur(5px)",
       }}
     >
       <Toolbar

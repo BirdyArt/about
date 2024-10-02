@@ -22,8 +22,8 @@ const Container = ({ isOpen }: { isOpen: boolean }) => {
       sx={{
         position: "absolute",
         zIndex: 0,
-        height: desktop ? "100vh" : "85vh",
-        width: desktop ? "90vw" : "100%",
+        height: desktop ? "100%" : "85%",
+        width: desktop ? "90%" : "100%",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-evenly",

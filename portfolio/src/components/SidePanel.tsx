@@ -25,8 +25,8 @@ const SidePanel = ({ isOpen }: { isOpen: boolean }) => {
     >
       <motion.div
         style={{
-          height: "50vh",
-          width: "10vw",
+          height: "50%",
+          width: "100%",
           y: 0,
           backgroundColor: "#F7F7F7",
           borderBottomColor: "black",
@@ -123,9 +123,9 @@ const SidePanel = ({ isOpen }: { isOpen: boolean }) => {
       </motion.div>
       <motion.div
         style={{
-          height: "50vh",
-          width: "10vw",
-          y: desktop ? "50vh" : 0,
+          height: "50%",
+          width: "100%",
+          y: desktop ? "50" : 0,
           backgroundColor: "#F7F7F7",
           borderTopColor: "black",
           borderTopStyle: "solid",
