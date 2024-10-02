@@ -29,7 +29,7 @@ const AboutMe = ({
             sx={{
               typography: { xs: "body1", md: "h6" },
               fontWeight: { xs: "400", md: "300 !important" },
-              mx: desktop ? 4 : 4,
+              mx: 4,
               mt: desktop ? 0 : "14vh",
               maxWidth: desktop ? "30vw" : "100%",
             }}

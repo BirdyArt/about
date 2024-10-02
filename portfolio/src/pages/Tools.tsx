@@ -109,59 +109,82 @@ const Tools = ({
         whileInView="onscreen"
         onViewportEnter={() => setCurrentPage("tools")}
         viewport={{ amount: 0.7 }}
+        style={{ overflow: "scroll" }}
       >
         <motion.div variants={aboutMe}>
-          <Typography
+          <Grid
+            container
+            spacing={4}
             sx={{
-              typography: { xs: "body1", md: "h6" },
-              fontWeight: { xs: "400", md: "300 !important" },
-              mx: desktop ? 4 : 4,
-              mt: desktop ? 0 : "14vh",
-              maxWidth: desktop ? "30vw" : "100%",
+              my: { xs: 10, lg: 0 },
+              pr: { xs: 4, lg: 32 },
+              pl: { xs: 4, lg: 18 },
             }}
           >
-            <Grid container spacing={4}>
-              <Grid item xs={12} md={4}>
-                {codeTools.map(({ image, title }) => (
-                  <Box
-                    component="img"
-                    src={image}
-                    alt={`logo of ${title}`}
-                    sx={{
-                      height: "24px",
-                      maxWidth: "100%",
-                    }}
-                  />
-                ))}
-              </Grid>
-              <Grid item xs={12} md={4}>
-                {frameworksTools.map(({ image, title }) => (
-                  <Box
-                    component="img"
-                    src={image}
-                    alt={`logo of ${title}`}
-                    sx={{
-                      height: "24px",
-                      maxWidth: "100%",
-                    }}
-                  />
-                ))}
-              </Grid>
-              <Grid item xs={12} md={4}>
-                {operationsTools.map(({ image, title }) => (
-                  <Box
-                    component="img"
-                    src={image}
-                    alt={`logo of ${title}`}
-                    sx={{
-                      height: "24px",
-                      maxWidth: "100%",
-                    }}
-                  />
-                ))}
-              </Grid>
+            <Grid item xs={12} md={4}>
+              <Typography variant="h3">Code</Typography>
+              <Typography variant="body1" gutterBottom>
+                Crafting clean, maintainable, and efficient code is my go-to
+                strategy. I strive for simplicity, ensuring that every line
+                serves a purpose. By adhering to best practices and coding
+                standards, I deliver robust solutions that are both scalable and
+                easy to understand.
+              </Typography>
+              {codeTools.map(({ image, title }) => (
+                <Box
+                  component="img"
+                  src={image}
+                  alt={`logo of ${title}`}
+                  sx={{
+                    height: "32px",
+                    maxWidth: "100%",
+                    mr: 1,
+                  }}
+                />
+              ))}
             </Grid>
-          </Typography>
+            <Grid item xs={12} md={4}>
+              <Typography variant="h3">Frameworks</Typography>
+              <Typography variant="body1" gutterBottom>
+                These powerful resources enable rapid development and ensure my
+                projects are equipped with the latest functionalities and
+                optimizations, providing a seamless user experience.
+              </Typography>
+              {frameworksTools.map(({ image, title }) => (
+                <Box
+                  component="img"
+                  src={image}
+                  alt={`logo of ${title}`}
+                  sx={{
+                    height: "32px",
+                    maxWidth: "100%",
+                    mr: 1,
+                  }}
+                />
+              ))}
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Typography variant="h3">Operations</Typography>
+              <Typography variant="body1" gutterBottom>
+                From version control to build automation, these tools help
+                manage complexity, ensure code quality, and facilitate
+                continuous integration and deployment, making development more
+                efficient and reliable.
+              </Typography>
+              {operationsTools.map(({ image, title }) => (
+                <Box
+                  component="img"
+                  src={image}
+                  alt={`logo of ${title}`}
+                  sx={{
+                    height: "32px",
+                    maxWidth: "100%",
+                    mr: 1,
+                  }}
+                />
+              ))}
+            </Grid>
+          </Grid>
         </motion.div>
       </motion.div>
     </Box>

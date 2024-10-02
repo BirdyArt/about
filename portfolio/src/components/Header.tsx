@@ -49,6 +49,7 @@ const Header = ({ currentPage }: { currentPage: string }) => {
       <Toolbar
         sx={{
           justifyContent: "space-between",
+          elevation: 0,
         }}
       >
         <Typography

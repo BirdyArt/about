@@ -29,6 +29,7 @@ const HeroPanel = ({ isOpen }: { isOpen: boolean }) => {
         borderBottomColor: "black",
         borderBottomStyle: "solid",
         borderBottomWidth: desktop ? 0 : "max(6px, 0.5vw)",
+        borderTop: "none",
         display: "flex",
         alignItems: "center",
         justifyContent: desktop ? "left" : "center",

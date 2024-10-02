@@ -71,7 +71,7 @@ const Works = ({
             container
             spacing={4}
             sx={{
-              my: { xs: 10, lg: 0 },
+              my: { xs: 10, lg: 6 },
               width: "inherit",
               mr: { xs: 4, sm: 8, md: 10, lg: `calc(96px + 10vw)` },
               ml: { xs: 0, sm: 4, md: 10, lg: 18 },
