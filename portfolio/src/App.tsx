@@ -1,18 +1,13 @@
 import { Box } from "@mui/material";
-import Hero from "./components/Hero";
-import AppBarTop from "./components/AppBar";
-import Careers from "./components/Careers";
-import Works from "./components/Works";
+import InitialTransition from "./components/InitialTransition";
+import Main from "./components/Main";
 
-const App = () => {
+function App() {
   return (
     <Box bgcolor={"#F7F7F7"}>
-      <AppBarTop />
-      <Hero />
-      <Careers />
-      <Works />
+      <InitialTransition />
+      <Main />
     </Box>
   );
-};
-
+}
 export default App;
