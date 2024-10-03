@@ -17,8 +17,8 @@ const BottomPanel = ({ isOpen }: { isOpen: boolean }) => {
     >
       <motion.div
         style={{
-          height: "calc(15vh - 12px)",
-          width: "100vw",
+          height: "calc(15vh - 18px)",
+          width: "100%",
           backgroundColor: "#F7F7F7",
           boxSizing: "border-box",
         }}

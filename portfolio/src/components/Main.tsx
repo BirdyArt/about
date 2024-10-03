@@ -21,6 +21,7 @@ const Main = () => {
       flexDirection={desktop ? "row" : "column"}
       overflow={"hidden"}
       position="relative"
+      height={window.innerHeight}
     >
       <HeroPanel isOpen={isOpen} />
       <Container isOpen={isOpen} />
@@ -35,7 +36,7 @@ const Main = () => {
         style={{
           position: "absolute",
           top: desktop ? "50%" : "85%",
-          left: desktop ? "90%" : "50%",
+          left: desktop ? "calc(90% - 2.7vw)" : "50%",
           zIndex: 1,
         }}
       >

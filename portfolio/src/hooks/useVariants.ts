@@ -23,13 +23,13 @@ export default function useVariants(): UseVariantsReturn {
     textContainer: {
       initial: {
         opacity: 1,
-        height: desktop ? "8vw" : "12vh",
+        height: desktop ? "8%" : "12%",
       },
       animate: {
         opacity: 0,
         height: 0,
         transition: {
-          duration: 0.3,
+          duration: 0.4,
           when: "afterChildren",
         },
       },
@@ -39,16 +39,16 @@ export default function useVariants(): UseVariantsReturn {
         y: 0,
       },
       animate: {
-        y: desktop ? "4.1vw" : "6.1vh",
+        y: "100%",
         transition: {
-          duration: 2,
+          duration: 3,
           ease: [0.87, 0, 0.13, 1],
         },
       },
     },
     box1: {
       open: {
-        x: desktop ? "0.5vw" : 0,
+        x: desktop ? "0.5%" : 0,
         y: desktop ? 0 : 7,
         transition: {
           duration: 1.5,
@@ -56,8 +56,8 @@ export default function useVariants(): UseVariantsReturn {
         },
       },
       closed: {
-        x: desktop ? "-90vw" : 0,
-        y: desktop ? 0 : "-86vh",
+        x: desktop ? "-100%" : 0,
+        y: desktop ? 0 : "-100%",
         transition: {
           duration: 1.5,
           ease: [0.87, 0, 0.13, 1],
@@ -66,7 +66,7 @@ export default function useVariants(): UseVariantsReturn {
     },
     box2: {
       open: {
-        y: "-50vh",
+        y: "-100%",
         transition: {
           duration: 1.5,
           ease: [0.87, 0, 0.13, 1],
@@ -82,7 +82,7 @@ export default function useVariants(): UseVariantsReturn {
     },
     box3: {
       open: {
-        y: "50vh",
+        y: "100%",
         transition: {
           duration: 1.5,
           ease: [0.87, 0, 0.13, 1],
@@ -98,7 +98,7 @@ export default function useVariants(): UseVariantsReturn {
     },
     box4: {
       open: {
-        y: "85vh",
+        y: "85%",
         transition: {
           duration: 1.5,
           ease: [0.87, 0, 0.13, 1],
@@ -132,7 +132,6 @@ export default function useVariants(): UseVariantsReturn {
     },
     aboutMe: {
       offscreen: {
-        // y: 50,
         filter: "blur(5px)",
         transition: {
           type: "spring",
@@ -141,7 +140,6 @@ export default function useVariants(): UseVariantsReturn {
         },
       },
       onscreen: {
-        // y: 0,
         filter: "blur(0px)",
         transition: {
           type: "spring",

@@ -40,7 +40,7 @@ const InitialTransition = () => {
           id="pattern"
           patternUnits="userSpaceOnUse"
           width={750}
-          height={800}
+          height={900}
           style={{ color: "white" }}
         >
           <rect
@@ -59,7 +59,7 @@ const InitialTransition = () => {
         <text
           textAnchor="middle"
           x="50%"
-          y="50%"
+          y="90%"
           style={{
             fill: "url(#pattern)",
             fontSize: desktop ? "4vw" : "6vh",

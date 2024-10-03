@@ -14,13 +14,15 @@ const AboutMe = ({
 
   return (
     <Box
-      height={desktop ? "100vh" : "85vh"}
       sx={{
         display: "flex",
         flexDirection: desktop ? "row" : "column",
         justifyContent: "center",
         alignItems: "center",
-        scrollSnapAlign: "center",
+        scrollSnapAlign: "start",
+        height: desktop ? window.innerHeight : "auto",
+        pl: { xs: 4, md: 18 },
+        pr: { xs: 4, md: 32 },
       }}
     >
       <motion.div initial="offscreen" whileInView="onscreen">
@@ -29,9 +31,7 @@ const AboutMe = ({
             sx={{
               typography: { xs: "body1", md: "h6" },
               fontWeight: { xs: "400", md: "300 !important" },
-              mx: 4,
               mt: desktop ? 0 : "14vh",
-              maxWidth: desktop ? "30vw" : "100%",
             }}
           >
             I am a front-end developer based in Vancouver, Canada. My passion is
@@ -46,16 +46,19 @@ const AboutMe = ({
         initial="offscreen"
         whileInView="onscreen"
         onViewportEnter={() => setCurrentPage("about me")}
-        viewport={{ amount: 0.7 }}
+        viewport={{ amount: 0.1 }}
       >
-        <motion.div variants={aboutMe}>
+        <motion.div
+          variants={aboutMe}
+          style={{ textAlign: "center", width: "100%" }}
+        >
           <Box
             component="img"
             src="/me.jpg"
             alt="profile picture"
             sx={{
               filter: "grayscale(100%)",
-              maxWidth: { xs: "60vw", md: "25vw" },
+              maxWidth: "80%",
               borderRadius: "16px",
               my: 4,
             }}

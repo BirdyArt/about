@@ -50,20 +50,20 @@ const Works = ({
 
   return (
     <Box
-      height={desktop ? "100vh" : "85vh"}
       sx={{
         display: "flex",
         flexDirection: desktop ? "row" : "column",
         justifyContent: "center",
         alignItems: "center",
         scrollSnapAlign: "start",
+        height: desktop ? window.innerHeight : "auto",
       }}
     >
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
         onViewportEnter={() => setCurrentPage("works")}
-        viewport={{ amount: 0.7 }}
+        viewport={{ amount: 0.1 }}
         style={{ overflow: "scroll" }}
       >
         <motion.div variants={aboutMe}>
