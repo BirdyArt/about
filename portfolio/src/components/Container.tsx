@@ -1,7 +1,7 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import useVariants from "../hooks/useVariants";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Header from "./Header";
 import AboutMe from "../pages/AboutMe";
 import Tools from "../pages/Tools";
@@ -14,7 +14,6 @@ const Container = ({ isOpen }: { isOpen: boolean }) => {
   const variants = useVariants();
   const [currentPage, setCurrentPage] = useState("about me");
   const { container } = variants;
-  const ref = useRef<HTMLDivElement>(null);
 
   return (
     <Box
@@ -26,7 +25,6 @@ const Container = ({ isOpen }: { isOpen: boolean }) => {
         overflow: "scroll",
         mx: desktop ? 4 : 0,
       }}
-      ref={ref}
     >
       <motion.div animate={isOpen ? "open" : "closed"} variants={container}>
         <Header currentPage={currentPage} />
