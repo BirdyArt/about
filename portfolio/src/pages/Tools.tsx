@@ -108,7 +108,7 @@ const Tools = ({
         initial="offscreen"
         whileInView="onscreen"
         onViewportEnter={() => setCurrentPage("tools")}
-        viewport={{ amount: 0.1 }}
+        viewport={{ amount: 0.2 }}
         style={{ overflow: "scroll" }}
       >
         <motion.div variants={aboutMe}>
@@ -122,7 +122,7 @@ const Tools = ({
             }}
           >
             <Grid item xs={12} md={4}>
-              <Typography variant="h3">Code</Typography>
+              <Typography variant={desktop ? "h3" : "h4"}>Code</Typography>
               <Typography variant="body1" gutterBottom>
                 Crafting clean, maintainable, and efficient code is my go-to
                 strategy. I strive for simplicity, ensuring that every line
@@ -132,6 +132,7 @@ const Tools = ({
               </Typography>
               {codeTools.map(({ image, title }) => (
                 <Box
+                  key={title}
                   component="img"
                   src={image}
                   alt={`logo of ${title}`}
@@ -144,7 +145,9 @@ const Tools = ({
               ))}
             </Grid>
             <Grid item xs={12} md={4}>
-              <Typography variant="h3">Frameworks</Typography>
+              <Typography variant={desktop ? "h3" : "h4"}>
+                Frameworks
+              </Typography>
               <Typography variant="body1" gutterBottom>
                 These powerful resources enable rapid development and ensure my
                 projects are equipped with the latest functionalities and
@@ -152,6 +155,7 @@ const Tools = ({
               </Typography>
               {frameworksTools.map(({ image, title }) => (
                 <Box
+                  key={title}
                   component="img"
                   src={image}
                   alt={`logo of ${title}`}
@@ -164,7 +168,9 @@ const Tools = ({
               ))}
             </Grid>
             <Grid item xs={12} md={4}>
-              <Typography variant="h3">Operations</Typography>
+              <Typography variant={desktop ? "h3" : "h4"}>
+                Operations
+              </Typography>
               <Typography variant="body1" gutterBottom>
                 From version control to build automation, these tools help
                 manage complexity, ensure code quality, and facilitate
@@ -173,6 +179,7 @@ const Tools = ({
               </Typography>
               {operationsTools.map(({ image, title }) => (
                 <Box
+                  key={title}
                   component="img"
                   src={image}
                   alt={`logo of ${title}`}

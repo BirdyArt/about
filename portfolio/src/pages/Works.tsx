@@ -78,7 +78,7 @@ const Works = ({
             }}
           >
             {works.map((work) => (
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={6} key={work.title}>
                 <WorksCard
                   title={work.title}
                   description={work.description}

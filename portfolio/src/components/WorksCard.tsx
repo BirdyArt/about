@@ -32,10 +32,10 @@ const WorksCard = ({
         flexDirection: "column",
         justifyContent: "space-between",
         bgcolor: "#F0F0F0",
-        "-webkit-transition": "box-shadow .3s ease-out;",
+        WebkitTransition: "box-shadow .3s ease-out",
         ":hover": {
           boxShadow: "1px 8px 20px grey",
-          "-webkit-transition": "box-shadow .3s ease-in",
+          WebkitTransition: "box-shadow .3s ease-out",
         },
       }}
     >

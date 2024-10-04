@@ -38,6 +38,7 @@ const Main = () => {
           top: desktop ? "50%" : "85%",
           left: desktop ? "calc(90% - 2.7vw)" : "50%",
           zIndex: 1,
+          textAlign: "center",
         }}
       >
         <IconButton
