@@ -3,6 +3,7 @@ import { Variants } from "framer-motion";
 export type UseVariantsReturn = {
   blackBox: Variants;
   textContainer: Variants;
+  textContainerWrapper: Variants;
   text: Variants;
   box1: Variants;
   box2: Variants;
