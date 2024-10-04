@@ -108,7 +108,7 @@ const Tools = ({
         initial="offscreen"
         whileInView="onscreen"
         onViewportEnter={() => setCurrentPage("tools")}
-        viewport={{ amount: 0.25 }}
+        viewport={{ amount: 0.3 }}
         style={{ overflow: "scroll" }}
       >
         <motion.div variants={aboutMe}>

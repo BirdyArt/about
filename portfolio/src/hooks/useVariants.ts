@@ -34,6 +34,17 @@ export default function useVariants(): UseVariantsReturn {
         },
       },
     },
+    textContainerWrapper: {
+      initial: {
+        opacity: 0,
+      },
+      animate: {
+        opacity: 1,
+        transition: {
+          duration: 1,
+        },
+      },
+    },
     text: {
       initial: {
         y: 0,
