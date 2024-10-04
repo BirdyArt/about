@@ -19,7 +19,7 @@ const AboutMe = ({
         flexDirection: desktop ? "row" : "column",
         justifyContent: "center",
         alignItems: "center",
-        scrollSnapAlign: "start",
+        scrollSnapAlign: desktop ? "start" : "none",
         height: desktop ? window.innerHeight : "auto",
         pl: { xs: 4, md: 18 },
         pr: { xs: 4, md: 32 },
