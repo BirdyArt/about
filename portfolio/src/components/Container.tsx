@@ -16,15 +16,6 @@ const Container = ({ isOpen }: { isOpen: boolean }) => {
   const { container } = variants;
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (ref.current) {
-      ref.current.scrollTo({
-        top: -9999,
-        behavior: "instant",
-      });
-    }
-  }, [ref.current]);
-
   return (
     <Box
       sx={{
@@ -32,10 +23,6 @@ const Container = ({ isOpen }: { isOpen: boolean }) => {
         zIndex: 0,
         height: desktop ? "100%" : "calc(85% - 1vw)",
         width: desktop ? "90%" : "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-        alignItems: "center",
         overflow: "scroll",
         mx: desktop ? 4 : 0,
       }}
