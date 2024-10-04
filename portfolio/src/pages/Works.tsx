@@ -55,7 +55,7 @@ const Works = ({
         flexDirection: desktop ? "row" : "column",
         justifyContent: "center",
         alignItems: "center",
-        scrollSnapAlign: "start",
+        scrollSnapAlign: desktop ? "start" : "none",
         height: desktop ? window.innerHeight : "auto",
       }}
     >

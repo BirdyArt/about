@@ -18,8 +18,10 @@ const Container = ({ isOpen }: { isOpen: boolean }) => {
 
   useEffect(() => {
     if (ref.current) {
-      setCurrentPage("about me");
-      ref.current.scrollTo(0, -9999);
+      ref.current.scrollTo({
+        top: -9999,
+        behavior: "instant",
+      });
     }
   }, [ref.current]);
 
