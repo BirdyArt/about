@@ -1,7 +1,7 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import useVariants from "../hooks/useVariants";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Header from "./Header";
 import AboutMe from "../pages/AboutMe";
 import Tools from "../pages/Tools";
